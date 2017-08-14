@@ -116,9 +116,9 @@ class FeatureUnhasher(BaseEstimator):
     """
     def __init__(self, hasher, unkn_template="FEATURE[%d]"):
         # type: (FeatureHasher, str) -> None
-        if hasher.input_type != 'string':
-            raise ValueError("FeatureUnhasher only supports hashers with "
-                             "input_type 'string', got %r." % hasher.input_type)
+        # if hasher.input_type != 'string':
+        #     raise ValueError("FeatureUnhasher only supports hashers with "
+        #                      "input_type 'string', got %r." % hasher.input_type)
         self.hasher = hasher
         self.n_features = self.hasher.n_features  # type: int
         self.unkn_template = unkn_template
